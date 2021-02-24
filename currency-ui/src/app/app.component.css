@@ -1,0 +1,103 @@
+#employees {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #employees td, #employees th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #employees tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #employees tr:hover {background-color: #ddd;}
+  
+  #employees th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: #fff;
+  }
+
+
+/* =========== custom css start ============= */
+.max-width-720 {
+  max-width: 720px;
+}
+.margin-auto {
+  margin: auto;
+}
+.custom-card {
+  border: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.custom-card:hover {
+  box-shadow: 0 7px 14px rgba(0,0,0,0.18), 0 5px 5px rgba(0,0,0,0.22);
+}
+.custom-card .card-header {
+  border: none;
+  background-color:brown;
+  color: #fff;
+}
+.custom-card .card-header {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.custom-label {
+  font-size: 0.75rem;
+}
+
+.thead{
+    background-color: brown;
+    color: #ddd;
+}
+
+.btn-custom-color {
+  background-color: #00b894;
+}
+.arrow-right {
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 100%;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.send-btn:hover .arrow-right {
+  transform: rotate(360deg);
+}
+.arrow-right::before {
+  content: "";
+    width: 15px;
+    border-top: 2px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.arrow-right::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 0;
+  top: 10px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.nav-link.active {
+  position: relative;
+}
+.nav-link.active::after {
+  content: "";
+  border-bottom: 2px solid #00b894;
+  width: 100%;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
+/* =========== custom css end ============= */

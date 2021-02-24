@@ -1,0 +1,42 @@
+
+<section class="max-width-720 margin-auto" >
+  <div class="card custom-card m-3">
+   
+    <h5 class="card-header"><img src="../assets/exchange.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+      Foreign Exchange Rates</h5>
+    <div class="card-body">
+    
+
+      <select class="custom-select custom-select-sm mb-3" (change)="changeCurrency($event)">
+        <option *ngFor="let Currency of currencies" [value]="Currency.abbrv">{{Currency.name}} ({{Currency.abbrv}})</option>
+      </select>
+  <!-- 
+        <a href="#" class="btn btn-primary btn-lg active m-2" role="button" aria-pressed="true" (click)="showTable()" *ngIf="!crawlImage">Show Image</a>
+  <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" (click)="showTable()" *ngIf="crawlImage">Show Text</a> -->
+    </div>
+  </div>
+</section>
+<div class="container" *ngIf='rates'>
+  <table class="table table-bordered ">
+    <thead class="thead">
+      <tr>
+      
+        <th scope="col">Country</th>
+        <th scope="col">Exchange Rate</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rate of rates| keyvalue">
+        
+        <td>{{rate.key}}</td>
+        <td>{{rate.value}}</td>
+       
+      </tr>
+     
+    </tbody>
+  </table>
+
+
+</div>
+
